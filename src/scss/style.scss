@@ -6,23 +6,35 @@
     align-items: center;
 }
 
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 20px;
 
     .boxes {
-        @extend %center;
         flex-direction: column;
+        height: 90vw;
+        position: absolute;
+        top: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
 
         .headers {
             width: 42vw;
             display: flex;
             justify-content: space-between;
             font-size: 2rem;
+            margin: auto;
         }
     }
 
@@ -33,6 +45,7 @@
         flex-wrap: wrap;
         width: 50vw;
         height: 50vw;
+        margin: auto;
 
         .box {
             flex: 15%;
@@ -45,6 +58,31 @@
 
             &.clickad {
                 background: blue!important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #app {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+
+        
+    .boxes {
+
+        .headers {
+            width: 75vw;
+        }
+    }
+
+        .grid {
+            width: 90vw;
+            height: 90vw;
+
+            .box {
+                flex: 15%;
             }
         }
     }

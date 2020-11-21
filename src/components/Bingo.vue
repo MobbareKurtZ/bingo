@@ -1,13 +1,13 @@
 <template>
 <div class="boxes">
     <h1>DALTONZBINGO</h1>
+    <button @click="slumpa()">Nya tal</button>
     <div class="headers"><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span></div>
     <div class="grid">
         <div v-for="(box, i) in boxes" :key="box.id" :value="box.id" @click="clickBox(box.id)" :class="{clickad: box.tick}" class="box">
             <h2>{{random[i]}}</h2>
         </div>
     </div>
-    <button @click="slumpa()">Nya tal</button>
 </div>
 </template>
 
