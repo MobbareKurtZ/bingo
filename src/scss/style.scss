@@ -1,0 +1,51 @@
+* {margin: 0}
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+
+    .boxes {
+        @extend %center;
+        flex-direction: column;
+
+        .headers {
+            width: 42vw;
+            display: flex;
+            justify-content: space-between;
+            font-size: 2rem;
+        }
+    }
+
+    .grid {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50vw;
+        height: 50vw;
+
+        .box {
+            flex: 15%;
+            cursor: pointer;
+            @extend %center;
+            flex-basis: 15%;
+            background: red;
+            font-size: 2rem;
+            margin: 1%;
+
+            &.clickad {
+                background: blue!important;
+            }
+        }
+    }
+}
