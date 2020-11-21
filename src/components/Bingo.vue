@@ -1,7 +1,7 @@
 <template>
 <div class="boxes">
     <h1>DALTONZBINGO</h1>
-    <button @click="slumpa()">Nya tal</button>
+    <button @click="slumpa()" v-if="test">Nya tal</button>
     <div class="headers"><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span></div>
     <div class="grid">
         <div v-for="(box, i) in boxes" :key="box.id" :value="box.id" @click="clickBox(box.id)" :class="{clickad: box.tick}" class="box">
@@ -16,6 +16,7 @@ export default {
     name: 'Bingo',
     methods: {
         slumpa() {
+            this.test = !this.test;
             let numbers = new Set;
             let a1, a2, a3, a4, a5;
             let ar = [];
@@ -51,6 +52,7 @@ export default {
     },
     data() {
         return {
+            test: false,
             random: [],
             boxes: [{
                     id: 1,
