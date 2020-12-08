@@ -20,6 +20,12 @@ body {
     color: #2c3e50;
     margin-top: 20px;
 
+    h1 {
+        span {
+            text-decoration: line-through;
+        }
+    }
+
     .boxes {
         flex-direction: column;
         height: 90vw;
@@ -28,6 +34,7 @@ body {
         margin: auto;
         left: 0;
         right: 0;
+        user-select: none;
 
         .headers {
             width: 42vw;
@@ -40,9 +47,9 @@ body {
 
     .grid {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2px;
         width: 50vw;
         height: 50vw;
         margin: auto;
@@ -53,9 +60,14 @@ body {
             @extend %center;
             flex-basis: 15%;
             background: red;
-            font-size: 2rem;
+            font-size: 1rem;
+            color: black;
+            align-content: center;
+            word-break: break-word;
             margin: 1%;
+            max-width: 180px;
             transition: 0.2s background ease;
+            padding: 1%;
 
             &.clickad {
                 transition: 0.2s background ease;

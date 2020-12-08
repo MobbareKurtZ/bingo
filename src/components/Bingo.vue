@@ -1,11 +1,11 @@
 <template>
 <div class="boxes">
-    <h1>DALTONZBINGO</h1>
+    <h1><span>DALTONZ</span> INTREZZEKLUBBENBINGO</h1>
     <button @click="slumpa()" v-if="test">Nya tal</button>
     <div class="headers"><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span></div>
     <div class="grid">
-        <div v-for="(box, i) in boxes" :key="box.id" :value="box.id" @click="clickBox(box.id)" :class="{clickad: box.tick}" class="box">
-            <h2>{{random[i]}}</h2>
+        <div v-for="(box) in boxes" :key="box.id" :value="box.id" @click="clickBox(box.id)" :class="{clickad: box.tick}" class="box">
+            <p>{{box.content}}</p>
         </div>
     </div>
 </div>
@@ -16,26 +16,14 @@ export default {
     name: 'Bingo',
     methods: {
         slumpa() {
-            this.test = !this.test;
             let numbers = new Set;
-            let a1, a2, a3, a4, a5;
             let ar = [];
-            while (numbers.size < 5) numbers.add(Math.floor(Math.random() * 14 + 1));
-            a1 = Array.from(numbers)
-            numbers = new Set;
-            while (numbers.size < 5) numbers.add(Math.floor(Math.random() * 14 + 15));
-            a2 = Array.from(numbers)
-            numbers = new Set;
-            while (numbers.size < 5) numbers.add(Math.floor(Math.random() * 14 + 30));
-            a3 = Array.from(numbers)
-            numbers = new Set;
-            while (numbers.size < 5) numbers.add(Math.floor(Math.random() * 14 + 45));
-            a4 = Array.from(numbers)
-            numbers = new Set;
-            while (numbers.size < 5) numbers.add(Math.floor(Math.random() * 14 + 60));
-            a5 = Array.from(numbers)
-            ar = ar.concat(a1, a2, a3, a4, a5);
-            this.random = ar;
+            while (numbers.size < this.content.length-1) numbers.add(Math.floor(Math.random() * this.content.length));
+            ar = Array.from(numbers)
+            console.log(ar)
+            this.boxes.forEach((box, i) => {
+                box.content = this.content[ar[i]];
+            });
         },
         clickBox(id) {
             this.boxes[id - 1].tick = !this.boxes[id - 1].tick;
@@ -53,106 +41,174 @@ export default {
     data() {
         return {
             test: false,
-            random: [],
+            content: [
+                "Någon mot nominerar sig",
+                "Mötet ajourneras",
+                "Intrezzeklubben fuckar statistiken",
+                "Intrezzeklubben gör rätt på statistiken",
+                "Ztyret vet inte hur stadgarna funkar",
+                "Någon har läst stadgarna på spårvagnen",
+                "Gustav Olsson är bitter",
+                "SNZ blir inte ansvarsbefriade",
+                "Revisorerna har gjort fel",
+                "Ingen vill vara revisor",
+                "Nominerad vet inte hur man ska svara på relevant fråga",
+                "Hela sektionsmötet sätter igång coffeebreak",
+                "Någon har inte muteat sig",
+                "Ztyrets mic är kass",
+                "Någon får bingo",
+                "Jag fick 2 i rad",
+                "Intrezzeklubben nailar en tweet",
+                "Robin pratar för mycket",
+                "Intrezzeklubben har liiit merch",
+                "Jag donera till intrezzeklubbens sicka merch",
+                "Någon dricker kaffe",
+                "Någon dricker kebabte",
+                "Intrezzeklubben har en jätteintrezzant kahoot",
+                "ZEXET är ej fulltaligt",
+                "Fler än 15 personer på mötet",
+                "Intrezzeklubben dumdum",
+                "Nominerad tackar nej",
+                "Motion går igenom",
+                "Motion blir trashad",
+                "“Kan ni se min skärm?”",
+                "Någon ligger i sängen",
+                "“Zåååååååg”",
+                "Falkman dyker upp",
+                "Falkman dyker inte upp",
+                "Ztyret ändrar dagordningen",
+                "Intrezzeklubben fuckar upp kahooten",
+                "Hur många procent är det i flaggpunch?",
+                "Jag ångrar att vi valde in dessa till intrezzeklubben",
+                "“kan ni höra mig?”",
+                "Någon sitter i en mikro med en dammsugare i micken",
+                "https://sv.wikipedia.org/wiki/Intresseklubben",
+                "Gratis:)))"
+            ],
             boxes: [{
                     id: 1,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 2,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 3,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 4,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 5,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 6,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 7,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 8,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 9,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 10,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 11,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 12,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 13,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 14,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 15,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 16,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 17,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 18,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 19,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 20,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 21,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 22,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 23,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 24,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
                 {
                     id: 25,
-                    tick: false
+                    tick: false,
+                    content: null
                 },
             ]
         };
