@@ -42,7 +42,7 @@ export default {
         return {
             test: false,
             content: [
-                "Någon mot nominerar sig",
+                "Någon motnominerar sig",
                 "Mötet ajourneras",
                 "Intrezzeklubben fuckar statistiken",
                 "Intrezzeklubben gör rätt på statistiken",
@@ -53,9 +53,7 @@ export default {
                 "Revisorerna har gjort fel",
                 "Ingen vill vara revisor",
                 "Nominerad vet inte hur man ska svara på relevant fråga",
-                "Hela sektionsmötet sätter igång coffeebreak",
                 "Någon har inte muteat sig",
-                "Ztyrets mic är kass",
                 "Någon får bingo",
                 "Jag fick 2 i rad",
                 "Intrezzeklubben nailar en tweet",
@@ -63,25 +61,24 @@ export default {
                 "Intrezzeklubben har liiit merch",
                 "Jag donera till intrezzeklubbens sicka merch",
                 "Någon dricker kaffe",
-                "Någon dricker kebabte",
                 "Intrezzeklubben har en jätteintrezzant kahoot",
                 "Webbgruppen har inval",
                 "Fler än 15 personer på mötet",
                 "Intrezzeklubben dumdum",
                 "Nominerad tackar nej",
-                "“Kan ni se min skärm?”",
                 "Någon ligger i sängen",
                 "“Zåååååååg”",
                 "Falkman dyker upp",
                 "Falkman dyker inte upp",
                 "Ztyret ändrar dagordningen",
                 "Intrezzeklubben fuckar upp kahooten",
-                "Hur många procent är det i flaggpunsch?",
-                "Jag ångrar att vi valde in dessa till intrezzeklubben",
-                "“kan ni höra mig?”",
-                "Någon sitter i en mikro med en dammsugare i micken",
-                "https://sv.wikipedia.org/wiki/Intresseklubben",
-                "Gratis:)))"
+                "Gratis:)))",
+                "Annark uttalar adjungera", 
+                "Jag fick ingen kebabpizza",
+                "Jag köpte lotter",
+                "Jag har vunnit intrezzeklubbens badsalt", 
+                "Jag vann på lotto",
+                
             ],
             boxes: [{
                     id: 1,
@@ -213,8 +210,6 @@ export default {
     }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped lang="scss">
 </style>
